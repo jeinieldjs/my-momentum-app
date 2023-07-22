@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Momentum App</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+  
+  <h4 id="toDoHeading">To-Do</h4>
+  <div id="toDoContainer">
+    <div id="popUpContainer" style="display: none;">
+      <input type="text" id="newToDoInput" placeholder="Add a new task">
+      <button id="addNewToDoButton">Add</button>
+      <ul id="popUpToDoList"></ul>
+    </div>
+  </div>
+
+    <div id="time"></div>
+    
+    <div id="greeting">
+      <input type="text" id="nameInput" placeholder="What is your name?" onkeydown="getGreeting(event)">
+      <div id="greetingDisplay" style="display:none;">
+      <p id="greetingText"></p>
+      </div>
+    </div>
+
+    <div id="focusContainer">
+      <input type="text" id="focusInput" placeholder="Enter your focus for today" onkeydown="handleInput(event)">
+      <div id="focusDisplay" style="display: none;">
+        <p id="focusText"></p>
+        <i id="doneIcon" class="fas fa-check" onclick="toggleCompleted()"></i>
+        <i id="deleteIcon" class="fas fa-trash" onclick="deleteFocus()"></i>
+      </div>
+    
+    <div id="quote-container">
+      <p id="quote-text"></p>
+      <div id="icons-container">
+        <i class="fas fa-redo regen-icon"></i>
+        <i class="fas fa-plus add-icon"></i>
+      </div>
+    </div>
+
+
+  <script src="time.js"></script>
+  <script src="greeting.js"></script>
+  <script src="focus.js"></script>
+  <script src="quote.js"></script>
+  <script src="background.js"></script>
+  <script src="todolist.js"></script>
+</body>
+</html>
