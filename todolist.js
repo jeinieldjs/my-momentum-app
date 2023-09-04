@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let toDoContainer = document.getElementById("toDoContainer");
+
   let popUpContainer = document.getElementById("popUpContainer");
   let toDoHeading = document.getElementById("toDoHeading");
   let popUpToDoList = document.getElementById("popUpToDoList");
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   addNewToDoButton.addEventListener("click", function () {
-    var text = newToDoInput.value;
+   let text = newToDoInput.value;
     if (text.trim() !== "") {
       addNewToDoItem(text, false);
       newToDoInput.value = "";
@@ -78,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   hidePopUp();
-});
 
 window.addEventListener("beforeunload", function () {
   document.getElementById("popUpContainer").style.display = "none";

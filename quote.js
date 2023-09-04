@@ -44,4 +44,4 @@ const addQuote = () => {
 regenIcon.addEventListener('click', generateRandomQuote);
 addIcon.addEventListener('click', addQuote);
 
-document.addEventListener('DOMContentLoaded', generateRandomQuote);
+generateRandomQuote();

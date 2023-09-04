@@ -21,7 +21,7 @@ function deleteFocus() {
   document.getElementById("focusDisplay").style.display = "none";
   document.getElementById("focusInput").style.display = "block";
   document.getElementById("focusText").classList.remove("completed"); 
-  localStorage.removeItem("completedStatus"); 
+  localStorage.removeItem("completedStatus");
 }
 
 function toggleCompleted() { 
