@@ -30,7 +30,10 @@ function getSavedName() {
     greetingText.textContent = `${greeting}, ${savedName}!`;
     greetingDisplay.style.display = "block";
     nameInput.style.display = "none";
+  } else {
+    getGreeting();
   }
+  
   greetingDisplay.addEventListener("click", function () {
     confirm('Do you want to change your name?')
     if (confirm){

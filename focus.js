@@ -1,13 +1,13 @@
 window.addEventListener("load", function() {
-  var focus = localStorage.getItem("focus");
+  let focus = localStorage.getItem("focus");
   if (focus) {
     showFocus(focus);
   }
 });
 
 function saveFocus() {
-  var focusInput = document.getElementById("focusInput");
-  var focusText = focusInput.value;
+  let focusInput = document.getElementById("focusInput");
+  let focusText = focusInput.value;
 
   if (focusText.trim() !== "") {
     localStorage.setItem("focus", focusText);
@@ -25,23 +25,23 @@ function deleteFocus() {
 }
 
 function toggleCompleted() { 
-  var focusText = document.getElementById("focusText");
+  let focusText = document.getElementById("focusText");
   focusText.classList.toggle("completed");
 
-  var isCompleted = focusText.classList.contains("completed"); 
+  let isCompleted = focusText.classList.contains("completed"); 
   localStorage.setItem("completedStatus", isCompleted.toString()); 
 }
 
 function showFocus(focus) {
-  var focusDisplay = document.getElementById("focusDisplay");
-  var focusText = document.getElementById("focusText");
-  var focusInput = document.getElementById("focusInput");
+  let focusDisplay = document.getElementById("focusDisplay");
+  let focusText = document.getElementById("focusText");
+  let focusInput = document.getElementById("focusInput");
 
   focusText.textContent = focus;
   focusDisplay.style.display = "block";
   focusInput.style.display = "none";
 
-  var isCompleted = localStorage.getItem("completedStatus") === "true"; 
+  let isCompleted = localStorage.getItem("completedStatus") === "true"; 
   if (isCompleted) {
     focusText.classList.add("completed");
   } else {
